@@ -8,6 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class User {
-    private String accNumber;
-    private String pin;
+    private String email;
+    private String password;
 }

@@ -13,11 +13,6 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String pin;
-    @OneToOne
-    @JoinColumn(name = "cust_id")
-    CustomerEntity customerEntity;
-    @OneToOne
-    @JoinColumn(name = "acc_id")
-    AccountEntity accountEntity;
+    private String email;
+    private String password;
 }
