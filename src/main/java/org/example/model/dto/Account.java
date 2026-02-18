@@ -12,5 +12,6 @@ import java.math.BigDecimal;
 public class Account {
     private String accNumber;
     private String type;
+    private String pin;
     private BigDecimal balance;
 }

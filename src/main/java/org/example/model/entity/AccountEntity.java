@@ -15,6 +15,7 @@ public class AccountEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String accNumber;
+    private String pin;
     private String type;
     private BigDecimal balance;
     @ManyToOne
