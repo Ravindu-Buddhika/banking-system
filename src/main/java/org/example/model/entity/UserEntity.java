@@ -1,8 +1,6 @@
 package org.example.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -13,10 +11,13 @@ import lombok.*;
 @Entity
 public class UserEntity {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String pin;
     @OneToOne
+    @JoinColumn(name = "cust_id")
     CustomerEntity customerEntity;
     @OneToOne
+    @JoinColumn(name = "acc_id")
     AccountEntity accountEntity;
 }

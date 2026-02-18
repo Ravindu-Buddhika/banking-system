@@ -1,6 +1,8 @@
 package org.example.model.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
@@ -12,7 +14,8 @@ import lombok.*;
 @Entity
 public class CustomerEntity {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String firstName;
     private String secondName;
     private String nic;

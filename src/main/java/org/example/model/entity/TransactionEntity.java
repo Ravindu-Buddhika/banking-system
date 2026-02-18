@@ -15,7 +15,8 @@ import java.time.LocalDateTime;
 @Entity
 public class TransactionEntity {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private BigDecimal amount;
     private LocalDateTime dateTime;
     private String reference;
